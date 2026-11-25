@@ -1,0 +1,9 @@
+version: 2
+
+# legacy - added in a hurry in 2023, nobody remembers why
+models:
+  - name: dim_child_behaviour
+    columns:
+      - name: behaviour_score
+        tests:
+          - not_null

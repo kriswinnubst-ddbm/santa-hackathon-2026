@@ -1,0 +1,90 @@
+INTAKE INTERVIEW – NORTH POLE ENTERPRISES – "Mission Control" dashboard
+Date: 18 December 2026, 07:45 (North Pole Time)
+Location: Santa's office, Rovaniemi Workshop (video call, connection unstable)
+Present: Santa Claus (CEO), Mrs. Claus (CFO / Head of Naughty-Nice Compliance), Pepper Minstix (Head Elf, Operations),
+         Sanne de Boer (DDBM, BI consultant), Joris Bakker (DDBM, data engineer)
+Recording: automatic transcript, not edited
+
+[00:00:04] Sanne: Good morning everyone, thanks for making time so close to Christmas. The goal today is to understand what you need to see in one dashboard, so we can sketch a first version.
+[00:00:12] Santa: Ho ho– sorry, habit. Yes. Good morning. Can you hear me? The reindeer are being loud.
+[00:00:15] Joris: We hear you fine.
+[00:00:18] Santa: Good. Let me start with the problem. Last week I open Tableau and the whole of Europe is red. Red! I am a jolly man, but I do not like red on a map unless it is my coat.
+[00:00:27] Sanne: Understood. When you open the dashboard, what is the very first thing you want to know?
+[00:00:31] Santa: Are the presents going to arrive. Simple. One number. Are we on track for the 24th, yes or no.
+[00:00:36] Mrs. Claus: It's not one number, dear. It's delivered versus planned. And it should be compared with how we did in November, otherwise every day in December looks like a disaster because the volumes go up.
+[00:00:45] Santa: Yes, yes, what she said. Delivered versus planned. Versus November.
+[00:00:48] Sanne: So a delivery rate against a baseline. Should that be a percentage?
+[00:00:51] Mrs. Claus: Percentage. And how many gifts are still open. Santa likes big numbers.
+[00:00:55] Santa: I like big numbers. And how many days until Christmas. Put that at the top. In big letters. Maybe with a little sleigh.
+[00:01:01] Joris: (laughs) A countdown.
+[00:01:03] Santa: A countdown! Exactly.
+[00:01:06] Sanne: OK. Then the map. You want to see regions?
+[00:01:09] Santa: The map is the most important. No wait – the number is the most important, then the map. The map should show me where it goes wrong. But not only red and green, because Rudolph is colour-blind, and sometimes he reads the dashboard on the sleigh tablet.
+[00:01:19] Pepper: He's not colour-blind, he just has a red nose.
+[00:01:21] Santa: Pepper, please. Use a colour scale that everybody can read. Blue to orange or something. Joris will know.
+[00:01:26] Joris: We'll pick an accessible palette.
+[00:01:29] Sanne: And when you see a region in trouble, Lapland for example, what is your next question?
+[00:01:33] Santa: WHY. Why is it red. Is it the weather? Is it my elves? Is it Rudolph? Last week it was all three at the same time, it was horrible. Lapland went down almost eighty percent.
+[00:01:42] Pepper: Seventy-nine.
+[00:01:43] Santa: Seventy-nine, thank you Pepper.
+[00:01:45] Pepper: And to be fair, the strike was about the cookie rate, which has now been resolved.
+[00:01:49] Mrs. Claus: Partially resolved.
+[00:01:51] Sanne: So when you click a region, you want to see the drivers: weather, staffing, reindeer, incidents.
+[00:01:56] Santa: Yes. On the same page. I do not want to click through seven tabs. I am 1,754 years old.
+[00:02:01] Joris: What about a trend? Delivery rate per day?
+[00:02:04] Santa: A line, yes. Per day. December. With a line for the target, the 95 percent.
+[00:02:08] Mrs. Claus: And the November baseline as a reference band, please. Not just the 95.
+[00:02:12] Santa: Both. Everything. (pause) No, not everything. Sanne, you decide, you are the expert.
+[00:02:17] Sanne: We'll show the target line and the baseline. Pepper, what do you need as Head of Operations?
+[00:02:21] Pepper: Elves. How many are working, how many are sick, how many are on strike, per workshop. And toys per elf hour. And defects, because last week in Hobart the chocolate melted and quality control rejected eleven percent.
+[00:02:33] Santa: The chocolate! Terrible.
+[00:02:35] Pepper: That's Australia, it's summer there. Every year the same.
+[00:02:38] Sanne: Do you want that on the same dashboard as Santa's view?
+[00:02:41] Pepper: Maybe a second tab. Santa doesn't need defect rates.
+[00:02:44] Santa: I want to see the defect rates.
+[00:02:46] Pepper: You don't read them.
+[00:02:47] Santa: I want to SEE them.
+[00:02:49] Mrs. Claus: Put a small bar per workshop. Absence on one axis. Everybody happy.
+[00:02:54] Sanne: Noted. Mrs. Claus, from your side: naughty and nice?
+[00:02:58] Mrs. Claus: Yes. I need the share of nice children per country, and how many wishes are approved, under review, or coal. And the unknowns – children where the Elf-on-the-Shelf was offline. I cannot sign off a list with unknowns.
+[00:03:10] Santa: How many unknowns are there?
+[00:03:11] Mrs. Claus: About three percent. That is eight thousand children in our sample, dear.
+[00:03:14] Santa: Oh no.
+[00:03:16] Joris: That's in the behaviour data, the score is empty when there are no events.
+[00:03:20] Mrs. Claus: Then show it as a separate category. Not hidden. Grey.
+[00:03:24] Sanne: And the top wishes? Most popular toys?
+[00:03:27] Santa: Ohhh yes. Top ten toys. Kids love the plush reindeer, of course.
+[00:03:31] Pepper: For once you're right. But headphones are number two this year.
+[00:03:33] Santa: Headphones. What happened to the world.
+[00:03:36] Sanne: Filters – what do you want to filter on?
+[00:03:39] Santa: Region. Date. Maybe workshop.
+[00:03:42] Mrs. Claus: Macro region first, then region. Europe, North America, and so on.
+[00:03:46] Joris: And should it work on mobile? You mentioned the sleigh tablet.
+[00:03:49] Santa: The sleigh tablet is like an iPad but with mittens. Big buttons. On the 24th I only look at the countdown, the map and the number of gifts still to deliver. Nothing else. I am busy.
+[00:03:58] Sanne: So a separate mobile layout with three elements.
+[00:04:01] Santa: Yes. Three. Maybe four. The weather. No, three.
+[00:04:05] Pepper: Can we get an alert when a KPI goes red? With an explanation? Now I have to dig through the incident log and the weather data every time Santa calls me in panic.
+[00:04:13] Santa: I do not panic.
+[00:04:14] Pepper: You called me at 3 a.m. about the Netherlands.
+[00:04:17] Santa: That was Sinterklaas. He takes all the rooftops on the 5th. Every year. Nobody told the dashboard.
+[00:04:23] Sanne: (laughs) We can annotate known events. Like pakjesavond on 5 December.
+[00:04:28] Santa: Annotate! Yes. And the Japanese thing.
+[00:04:31] Joris: The Japanese thing?
+[00:04:32] Pepper: On the 20th Japan dropped by half, but it was just the confirmation sync from Yakutsk that failed. The gifts were delivered. Data issue.
+[00:04:39] Santa: So the dashboard lied to me.
+[00:04:41] Joris: The data was incomplete. We should show data freshness or a warning when confirmations are missing.
+[00:04:46] Mrs. Claus: Yes. I want to trust the numbers before I trust the colours.
+[00:04:50] Sanne: Last question: how often do you look at this?
+[00:04:53] Santa: Every morning with my cocoa. And in December every hour. And on the 24th every minute.
+[00:04:58] Mrs. Claus: Weekly report for the board as PDF, please. The board is the reindeer union and the Tooth Fairy, she likes PDFs.
+[00:05:04] Sanne: Great. To summarise, we have the executive overview with the countdown, delivery rate versus baseline, gifts open, the map with drill-down to drivers, the daily trend with target and baseline; an operations tab for elves and quality; and a naughty-nice compliance view. Plus a mobile layout and alerts with explanations.
+[00:05:20] Santa: That sounds like a lot.
+[00:05:21] Sanne: We'll start with a mock-up.
+[00:05:23] Santa: Good. Make it festive. But professional. But festive.
+[00:05:26] Pepper: Not too festive.
+[00:05:27] Santa: Pepper.
+[00:05:28] [connection lost]
+[00:05:51] Santa: –and no pie charts. Mrs. Claus hates pie charts.
+[00:05:53] Mrs. Claus: Except Christmas pie.
+[00:05:55] Santa: Except Christmas pie. Ho ho ho. Thank you all.
+[END OF TRANSCRIPT]

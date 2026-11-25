@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "{{ var('santa_db') }}"
+    schema: RAW
+    tables:
+      - name: raw_letters
+      - name: raw_behaviour_events
+      - name: raw_elf_shifts
+      - name: raw_sleigh_shipments
+      - name: raw_weather_readings
+      - name: raw_reindeer_health
+      - name: raw_incidents
+  - name: ref_data
+    database: "{{ var('santa_db') }}"
+    schema: ANALYTICS
+    tables:
+      - name: dim_region
+      - name: dim_workshop
+      - name: dim_child
+      - name: dim_toy
+      - name: dim_elf
+      - name: dim_reindeer
+      - name: fct_wishlist_items

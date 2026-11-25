@@ -1,0 +1,14 @@
+# copy to ~/.dbt/profiles.yml and fill in
+santa:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: <orgname>-<accountname>
+      user: <user>
+      password: <password>        # or authenticator: externalbrowser
+      role: SYSADMIN
+      warehouse: TEAM_WH
+      database: TEAM_WORK
+      schema: DBT
+      threads: 4

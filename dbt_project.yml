@@ -1,0 +1,30 @@
+name: 'north_pole_analytics'
+version: '0.3.1'
+config-version: 2
+profile: 'santa'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+vars:
+  santa_db: SANTA_DATA        # name of the shared source database in your Snowflake account
+  baseline_end_date: '2026-11-28'
+
+models:
+  north_pole_analytics:
+    staging:
+      +materialized: view
+      +schema: staging
+    intermediate:
+      +materialized: view
+      +schema: intermediate
+    marts:
+      +materialized: table
+      operations:
+        +schema: operations
+      compliance:
+        +schema: compliance
