@@ -1,0 +1,11 @@
+[0m11:40:00.939903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E413ED5490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E413DDAD50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E4140F8B10>]}
+
+
+============================== 11:40:00.946651 | 7fbc928f-589d-4a2e-90ba-c5c7b1e17f74 ==============================
+[0m11:40:00.946651 [info ] [MainThread]: Running with dbt=1.5.1
+[0m11:40:00.947866 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\krisw\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'c:\\Users\\krisw\\santa-hackathon-2026\\santa-hackathon-2026\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m11:40:00.968803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7fbc928f-589d-4a2e-90ba-c5c7b1e17f74', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E413AE1110>]}
+[0m11:40:00.970617 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m11:40:00.972361 [debug] [MainThread]: Command `cli deps` succeeded at 11:40:00.971843 after 0.21 seconds
+[0m11:40:00.973439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E4140020D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E413EBC690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E413EBC350>]}
+[0m11:40:00.974513 [debug] [MainThread]: Flushing usage events
